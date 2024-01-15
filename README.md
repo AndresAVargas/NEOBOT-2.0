@@ -9,7 +9,7 @@ Creación de un robot móvil de navegación y mapeo autoónomo
 ## Instalación de ROS2 (Humble Hawksbill)
 Para la raspberry se instala ros 2.
 ### Establecer configuración regional
-´´´
+```
 locale  # check for UTF-8
 
 sudo apt update && sudo apt install locales
@@ -18,4 +18,5 @@ sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 locale  # verify settings
-´´´
+
+```
