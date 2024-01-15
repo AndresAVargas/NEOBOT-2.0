@@ -20,3 +20,32 @@ export LANG=en_US.UTF-8
 locale  # verify settings
 
 ```
+## Fuentes de configuración
+Habilitamos el repositorio de ubuntu universe
+```
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+```
+Se agrega la clave GPG ros2 con apt
+```
+sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+```
+Agregamos el repositorio a las listas fuente
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+```
+## Instalar paquetes de Ros2
+Se actualiza los repositorios
+```
+sudo apt update
+```
+Instalamos la nueva versiones
+```
+sudo apt upgrade
+```
+Instalamos la version de escritorio
+```
+sudo apt install ros-humble-desktop
+```
+#Conectando el sensor Rplidar
